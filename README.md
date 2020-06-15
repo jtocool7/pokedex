@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -627,7 +628,7 @@ const fetchPokeData = id => {
       pokeId.textContent = '#' + data['id'].toString().padStart(3, '0');
       pokeWeight.textContent = data['weight'];
       pokeHeight.textContent = data['height'];
-      pokeFrontImage.src = data['sprites']['front_default'] || '';
+      pokeFrontImage.src = data['sprites']['front_default'] || pokeFrontImage .classList.add('hide');;
       pokeBackImage.src = data['sprites']['back_default'] || pokeBackImage .classList.add('hide');
     });
 };
